@@ -35,9 +35,12 @@ function binarySearch(array, value, start=0, end=array.length-1) {
 // and are using the recursive binary search algorithm. 
 // Identify the sequence of numbers that each recursive call will search to find 8.
 
+// 3 searches --> first 11, then 6, then 8.
+
 // Given a sorted list 3, 5, 6, 8, 11, 12, 14, 15, 17, 18 and are using the recursive binary search algorithm. 
 // Identify the sequence of numbers that each recursive call will search to find 16?
 
+// 4 steps --> 11, 15, 17, then to nonexistent index- returns that is not in the array.
 
 // Adding a React UI
 // For exercises 1 and 2, you will be using a search algorithm to search for an item in a dataset. 

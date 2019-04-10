@@ -180,23 +180,24 @@ dsfPostOrder() {
 * FIFO Queue
 
 ````js
-function bfs(values) {
-    values = values || [];
-    const queue = [this];
+function bfs(values=[]) {
+    const queue = new Queue(); // Assuming a Queue is implemented (refer to previous lesson on Queue)
 
     while (queue.length) {
-        var node = queue.shift();
-        values.push(node.value);
+      const node = queue.dequeue(); //remove from the queue
+      values.push(node.value); // add that value from the queue to an array
 
-        if (node.left) {
-            queue.push(node.left);
-        }
-        if (node.right) {
-            queue.push(node.right);
-        }
+      if (node.left) {
+        queue.enqueue(node.left); //add left child to the queue
+      }
+
+      if (node.right) {
+        queue.enqueue(node.right); // add right child to the queue
+      }
     }
+
     return values;
-};
+  }
 ````
 
 ## Today
